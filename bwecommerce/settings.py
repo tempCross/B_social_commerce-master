@@ -5,7 +5,7 @@ ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
-ALLOWED_HOSTS = ['7eeacc81.ngrok.io', 'localhost']
+ALLOWED_HOSTS = ['7eeacc81.ngrok.io', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_countries',
     'django_filters',
+    'django_extensions',
     'paypal.standard.ipn',
 
     'allauth.socialaccount.providers.facebook',
@@ -30,7 +31,7 @@ INSTALLED_APPS = [
     
 ]
 
-
+#ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
