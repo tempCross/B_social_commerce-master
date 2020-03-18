@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
 
     'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'cookielaw',
     'core'
     
 ]
@@ -106,6 +108,18 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
 
 # CRISPY FORMS
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

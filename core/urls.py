@@ -14,6 +14,7 @@ from .views import (
     FilterShirtView,
     FilterSportwearView,
     FilterOutwearView,
+    LegalView,
     remove_single_item_from_cart,
     process_payment,
     payment_done,
@@ -37,5 +38,6 @@ urlpatterns = [
     path('payment-cancelled/', payment_cancelled, name='payment-cancelled'),
     path('filter-shirt-view/', FilterShirtView.as_view(), name='filter-shirt-view'),
     path('filter-sportwear-view/', FilterSportwearView.as_view(), name='filter-sportwear-view'),
-    path('filter-outwear-view/', FilterOutwearView.as_view(), name='filter-outwear-view')
+    path('filter-outwear-view/', FilterOutwearView.as_view(), name='filter-outwear-view'),
+    path('legal-advice/', LegalView.as_view(), name='legal-advice')
 ]

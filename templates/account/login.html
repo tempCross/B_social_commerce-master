@@ -22,17 +22,17 @@
           
           {% if socialaccount_providers %}
           <p>{% blocktrans with site.name as site_name %}Please sign in with your
-            Facebook account. Or, <a href="{{ signup_url }}">sign up</a>
+            Facebook or Google account. Or, <a href="{{ signup_url }}">sign up</a>
           for a <b>Solstyce Closet</b> account and sign in below:{% endblocktrans %}</p>
           
           <div class="socialaccount_ballot">
           
-            <ul class="socialaccount_providers">
-              <i class="fab fa-facebook-square"></i>
+            <ul class="socialaccount_providers" style="list-style: none;">
+              
               {% include "socialaccount/snippets/provider_list.html" with process="login" %}
             </ul>
           
-            <div class="login-or">{% trans 'or' %}</div>
+            <div class="login-or"><b>{% trans 'or' %}</b></div>
           
           </div>
           

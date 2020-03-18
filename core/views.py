@@ -25,6 +25,10 @@ search_term=''
 def create_ref_code():
     return ''.join(random.choices(string.ascii_lowercase + string.digits, k=20))
 
+class LegalView(ListView):
+    model = Item
+    template_name = "legal-advice.html"
+
 class FilterShirtView(ListView):
     model = Item
     paginate_by = 10

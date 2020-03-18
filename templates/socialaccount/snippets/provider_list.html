@@ -14,7 +14,14 @@
 {% endfor %}
 {% endif %}
 <li>
+  {% if provider.name == "Facebook" %}
   <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}" 
-     href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">{{provider.name}}</a>
+     href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fab fa-facebook-square mr-3" style="font-size:24px; float: left;"></i></a>
 </li>
+  {% elif provider.name == "Google" %}
+<li>
+   <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}" 
+     href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"><i class="fab fa-google mr-3 " style="font-size:24px;"></i></a>
+</li>
+{% endif %}
 {% endfor %}
