@@ -1,5 +1,6 @@
 import os
 
+
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 
 DEBUG = True
@@ -129,3 +130,4 @@ STRIPE_SECRET_KEY = 'sk_test_RrST84B0fJ1vCOIKUbOHXgMq008YlvW79E'
 PAYPAL_RECEIVER_EMAIL = 'sb-zw6or1172130@business.example.com'
 
 PAYPAL_TEST = True
+
