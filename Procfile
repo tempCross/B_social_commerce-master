@@ -1,1 +1,1 @@
-web: gunicorn bcommerce_web.wsgi
+web: gunicorn bwecommerce.wsgi
