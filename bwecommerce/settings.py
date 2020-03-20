@@ -1,5 +1,5 @@
 import os
-
+import django_heroku
 
 ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 
@@ -131,3 +131,4 @@ PAYPAL_RECEIVER_EMAIL = 'sb-zw6or1172130@business.example.com'
 
 PAYPAL_TEST = True
 
+django_heroku.settings(locals())

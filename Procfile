@@ -1,0 +1,1 @@
+web: gunicorn bcommerce_web.wsgi
